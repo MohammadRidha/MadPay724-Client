@@ -18,13 +18,12 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              
               "src/assets/wp-includes/js/thickbox/thickbox3c21.css",
               "src/assets/wp-includes/css/dist/block-library/style-rtl.min3c21.css",
               "src/assets/wp-content/plugins/woo-gutenberg-products-block/build/vendors2fca.css",
@@ -52,12 +51,8 @@
               "src/assets/wp-content/plugins/rays-grid/assets/public/css/vendor/magnific-popup3c21.css",
               "src/assets/wp-content/themes/munza/rtl.css",
               "src/assets/wp-content/plugins/munza-core/assets/front/css/custom-style3c21.css"
-              
-
-
             ],
             "scripts": [
-
               "src/assets/wp-includes/js/jquery/jqueryb8ff.js",
               "src/assets/wp-includes/js/jquery/jquery-migrate.min330a.js",
               "src/assets/wp-content/plugins/revslider/public/assets/js/jquery.themepunch.tools.minf542.js",
@@ -105,7 +100,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -184,6 +178,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "MadPay724-App"
+    }
+  },
+  "defaultProject": "MadPay724-App",
+  "cli": {
+    "analytics": "9555d21e-8f04-4b9f-a6e7-820de8761f61"
+  }
 }

@@ -45,8 +45,8 @@
               "src/assets/vendors/js/chartist.min.js",
               "src/assets/js/app-sidebar.js",
               "src/assets/js/notification-sidebar.js",
-              "src/assets/js/customizer.js",
-              "src/assets/js/dashboard-ecommerce.js"
+              "src/assets/js/customizer.js"
+              
             ],
             "es5BrowserSupport": true
           },

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import Chartist from '../../assets/vendors/js/chartist.min.js';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-panel',
@@ -10,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class PanelComponent implements OnInit {
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private alertService: ToastrService) {
   }
   ngOnInit() {
 
@@ -18,6 +19,7 @@ export class PanelComponent implements OnInit {
 
   logout() {
     localStorage.removeItem('token');
+    this.alertService.warning('خروج با موفقیت انجام شد', 'هشدار');
     this.router.navigate(['/auth/login']);
   }
 }

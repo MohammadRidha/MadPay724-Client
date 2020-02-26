@@ -3,12 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AuthComponent } from './auth/auth.component';
 
 import { RouterModule } from '@angular/router';
 import { adminRoutes } from './routes/routes';
 import { AuthModule } from './auth/auth.module';
 import { PanelModule } from './panel/panel.module';
+import { ErrorInterceptorProvider } from './services/error.interceptor';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
+import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
 
 
 
@@ -21,11 +25,19 @@ import { PanelModule } from './panel/panel.module';
       AppRoutingModule,
       AuthModule,
       PanelModule,
-      RouterModule.forRoot(adminRoutes)
+      RouterModule.forRoot(adminRoutes),
+      BrowserAnimationsModule,
+      ToastrModule.forRoot({
+         timeOut: 5000,
+         positionClass: 'toast-bottom-center',
+         preventDuplicates: true,
+         progressBar: true,
+         progressAnimation: 'decreasing'
+      }),
+      LoadingBarHttpClientModule,
+      LoadingBarRouterModule
    ],
-   providers: [],
-   bootstrap: [
-      AppComponent
-   ]
+   providers: [ErrorInterceptorProvider],
+   bootstrap: [AppComponent]
 })
 export class AppModule { }

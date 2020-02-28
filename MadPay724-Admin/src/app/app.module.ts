@@ -33,9 +33,7 @@ import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
          preventDuplicates: true,
          progressBar: true,
          progressAnimation: 'decreasing'
-      }),
-      LoadingBarHttpClientModule,
-      LoadingBarRouterModule
+      })
    ],
    providers: [ErrorInterceptorProvider],
    bootstrap: [AppComponent]

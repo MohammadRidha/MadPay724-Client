@@ -4,8 +4,6 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { RouterModule } from '@angular/router';
-import { adminRoutes } from './routes/routes';
 import { AuthModule } from './auth/auth.module';
 import { PanelModule } from './panel/panel.module';
 import { ErrorInterceptorProvider } from './services/error.interceptor';
@@ -37,9 +35,7 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig = {
    imports: [
       BrowserModule,
       AppRoutingModule,
-      AuthModule,
       PanelModule,
-      RouterModule.forRoot(adminRoutes),
       BrowserAnimationsModule,
       ToastrModule.forRoot({
          timeOut: 5000,

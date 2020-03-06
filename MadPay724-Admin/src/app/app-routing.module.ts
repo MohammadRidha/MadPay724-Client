@@ -1,8 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
-import { AuthComponent } from './auth/auth.component';
-import { LoginComponent } from './auth/components/login/login.component';
-import { RegisterComponent } from './auth/components/register/register.component';
 
 const routes: Routes = [
   { path: 'auth', redirectTo: '/auth/login', pathMatch: 'full'},
@@ -12,8 +9,8 @@ const routes: Routes = [
   {path: 'panel', loadChildren : () => import('./panel/panel.module').then(m => m.PanelModule)},
 
   {path: '**', redirectTo: '/auth/login', pathMatch: 'full'},
-];
 
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, {preloadingStrategy: PreloadAllModules})],

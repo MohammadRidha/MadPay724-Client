@@ -20,7 +20,10 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     // tslint:disable-next-line:no-string-literal
-    this.route.queryParams.subscribe(params => this.returnUrl = params['return'] || '/panel');
+    this.route.queryParams.subscribe(params => this.returnUrl = params['return'] || '/panel/dashboard');
+    if (this.loggedIn()) {
+      this.router.navigate([this.returnUrl]);
+    }
   }
 
 
@@ -31,5 +34,9 @@ export class LoginComponent implements OnInit {
     }, error => {
       this.alertService.error(error, 'خطا در ورود');
     });
+  }
+
+  loggedIn() {
+    return this.authService.loggedIn();
   }
 }

@@ -43,9 +43,7 @@
               "src/assets/vendors/js/screenfull.min.js",
               "src/assets/vendors/js/pace/pace.min.js",
               "src/assets/js/app-sidebar.js",
-              "src/assets/js/notification-sidebar.js",
-              "src/assets/js/customizer.js"
-              
+              "src/assets/js/notification-sidebar.js"
             ],
             "es5BrowserSupport": true
           },
@@ -126,24 +124,12 @@
               "**/node_modules/**"
             ]
           }
-        },
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
-          "options": {
-            "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "MadPay724-Admin:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "MadPay724-Admin:serve:production"
-            }
-          }
         }
       }
     }
   },
   "defaultProject": "MadPay724-Admin",
   "cli": {
-    "analytics": "e9114f86-0eca-4ed6-bbe1-72191e38258e"
+    "analytics": false
   }
 }

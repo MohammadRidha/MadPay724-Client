@@ -182,6 +182,6 @@
   },
   "defaultProject": "MadPay724-App",
   "cli": {
-    "analytics": "9555d21e-8f04-4b9f-a6e7-820de8761f61"
+    "analytics": false
   }
 }

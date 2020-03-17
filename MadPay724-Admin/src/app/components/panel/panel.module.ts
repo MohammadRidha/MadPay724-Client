@@ -4,7 +4,7 @@ import { PanelRoutingModule } from './panel-routing.module';
 import { DashboardComponent } from './components/components/dashboard/dashboard.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
-import { ProfileComponent } from './components/components/profile/profile.component';
+import { ProfileComponent } from './../panel/components/components/userinfo/profile/profile.component';
 
 @NgModule({
   imports: [

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PanelComponent } from './panel.component';
 import { DashboardComponent } from './components/components/dashboard/dashboard.component';
-import { ProfileComponent } from './components/components/profile/profile.component';
+import { ProfileComponent } from './../panel/components/components/userinfo/profile/profile.component';
 
 const routes: Routes = [
   {

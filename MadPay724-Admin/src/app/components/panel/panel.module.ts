@@ -5,6 +5,7 @@ import { DashboardComponent } from './components/components/dashboard/dashboard.
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { ProfileComponent } from './../panel/components/components/userinfo/profile/profile.component';
+import { UserService } from './services/user.service';
 
 @NgModule({
   imports: [
@@ -17,6 +18,9 @@ import { ProfileComponent } from './../panel/components/components/userinfo/prof
     NavbarComponent,
     SidebarComponent
 
-  ]
+  ],
+  providers: [
+    UserService
+  ],
 })
 export class PanelModule { }
